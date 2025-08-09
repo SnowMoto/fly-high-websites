@@ -13,9 +13,22 @@ header {
 }
 
 body {
-    background-color: var(--secondary-color);
-    opacity: 0;
-    transition: opacity 0.5s ease-in;
+  position: relative;
+  background-color: var(--secondary-color);
+  z-index: 0; 
+
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('/images/city.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.18; 
+  z-index: -1; 
 }
 
 body.loaded {
@@ -159,7 +172,7 @@ p {
     background-color: #000;
     color: #fff;
     padding: 30px 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 0.95rem;
     border-top: 2px solid #444;
 }
@@ -186,7 +199,6 @@ p {
 .footer-links span,
 .footer-legal span {
     flex-basis: 100%;
-    font-weight: bold;
     color: #ccc;
     margin-bottom: 5px;
 }
