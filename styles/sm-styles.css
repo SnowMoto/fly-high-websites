@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
+:root {
+    --primary-color: #00aaff;
+    --secondary-color: #000;
+    --text-color: whitesmoke;
+    --heading: 'Iceland', sans-serif;
+    --body: 'Oswald', sans-serif;
+}
+
+header {
+    display: none;
+}
+
+body {
+    background-color: var(--secondary-color);
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+h1 {
+    display: block;
+    font-family: var(--heading);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+h2 {
+    font-family: var(--heading);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+p {
+    font-family: var(--body);
+    color: var(--text-color);
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+/* Burger button */
+.mobile-header {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    gap: 3rem;
+}
+
+.mobile-header .burger {
+    font-size: 25px;
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    margin: 0%;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Nav starts hidden */
+.mobile-nav {
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    background: var(--secondary-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 999;
+}
+
+/* Show nav when active */
+.mobile-nav.active {
+    max-height: 300px;
+}
+
+/* Nav list styling */
+.mobile-nav ul {
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.mobile-nav a.active,
+.mobile-nav a:hover {
+    color: #0090da;
+    font-weight: bold;
+}
+
+.burger.close {
+    transform: scale(1.5);
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min-content;
+}
+
+.menu-link {
+    font-family: var(--body);
+    color: var(--text-color);
+    font-size: .85rem;
+    text-decoration: none;
+}
+
+/*Booking Icon*/
+.booking {
+    width: 150%;
+    height: auto;
+    background: url('/images/birthday.png') no-repeat center center;
+    background-size: contain;
+}
+
+.booking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min-content;
+}
+
+.book-link {
+    font-family: var(--body);
+    color: var(--text-color);
+    font-size: .85rem;
+    text-decoration: none;
+}
+
+.mobile-header .logo {
+    max-width: 30%;
+    height: auto;
+}
+
+.site-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.95rem;
+    border-top: 2px solid #444;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-links,
+.footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    line-height: 1.6;
+}
+
+.footer-links span,
+.footer-legal span {
+    flex-basis: 100%;
+    font-weight: bold;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.site-footer a {
+    color: #00aced;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #1da1f2;
+    text-decoration: underline;
+}
