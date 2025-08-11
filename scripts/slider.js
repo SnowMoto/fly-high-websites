@@ -22,3 +22,23 @@ tabs.forEach(tab => {
         newContent.classList.add('active');
     });
 });
+
+//Policy
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const isOpen = content.classList.contains('open');
+
+      button.setAttribute('aria-expanded', !isOpen);
+
+      if (isOpen) {
+        content.classList.remove('open');
+        content.setAttribute('hidden', '');
+      } else {
+        content.classList.add('open');
+        content.removeAttribute('hidden');
+      }
+    });
+  });
+});

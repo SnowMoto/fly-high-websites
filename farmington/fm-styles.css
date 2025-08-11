@@ -19,7 +19,7 @@
 .tab-btn {
     position: relative;
     z-index: 0;
-    padding: 10px 20px;
+    padding: .5rem 3rem;
     background: black;
     color: white;
     border: none;
@@ -27,7 +27,7 @@
     border-radius: 8px;
     cursor: pointer;
     font-family: 'Oswald', sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 /* Rainbow glow border */
@@ -101,11 +101,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #1f1f1f;
+    background-color: #1a1a1a;
     /* Dark background */
     border-radius: 12px;
-    padding: 1rem;
-    gap: 2rem;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    gap: 1rem;
     text-align: center;
     margin-top: 3rem;
 }
@@ -123,6 +123,7 @@
     font-size: 2rem;
     color: #00aaff;
     margin-bottom: 0.5rem;
+    margin-top: 1rem;
 }
 
 .party-text .package-price {
@@ -141,7 +142,7 @@
 
 .party-text ul li {
     font-family: 'oswald', sans-serif;
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin-bottom: 0.5rem;
 }
 
@@ -272,16 +273,72 @@ path.two {
 }
 
 .include-item p {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: whitesmoke;
 }
 
+@media (min-width: 500px) and (max-width: 1050px) {
+    .includes-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .75rem;
+        margin-top: 4rem;
+    }
+    .party-text {
+        padding-left: 2rem;
+    }
+
+    .tab-btn {
+        font-size: 1.25rem;
+    }
+
+    .party-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .party-text ul li {
+        font-size: 1.5rem;
+    }
+    .include-item {
+        display: block;
+        text-align: center;
+    }
+
+    .includes-grid > :nth-child(4),
+    .includes-grid > :nth-child(5) {
+        justify-self: center; 
+    }
+
+    .includes-grid > :nth-child(4) {
+        grid-column: 1 / 2;
+        transform: translateX(50%);
+    }
+
+    .includes-grid > :nth-child(5) {
+        grid-column: 2 / 3;
+        transform: translateX(50%);
+    }
+
+    .include-item img {
+        max-width: 40%;
+        margin-bottom: 0.75rem;
+    }
+
+    .include-item p {
+        font-size: 1.5rem;
+    }
+}
+
 /* Responsive: two columns on desktop */
-@media (min-width: 750px) {
+@media (min-width: 1050px) {
     .party-layout {
         flex-direction: row;
         text-align: left;
         justify-content: center;
+    }
+
+    .party-tabs {
+        gap: 5rem;
     }
 
     .party-image,
