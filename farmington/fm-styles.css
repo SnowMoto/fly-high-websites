@@ -26,7 +26,7 @@
     outline: none;
     border-radius: 8px;
     cursor: pointer;
-    font-family: 'Oswald', sans-serif;
+    font-family: "Electrolize", sans-serif;
     font-size: 1.5rem;
 }
 
@@ -141,8 +141,8 @@
 }
 
 .party-text ul li {
-    font-family: 'oswald', sans-serif;
-    font-size: 1.25rem;
+    font-family: "Electrolize", sans-serif;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -175,6 +175,7 @@
 .party-btn:hover {
     transition: 0.5s;
     box-shadow: 6px 6px 0 #7017c4;
+    color: #81e958;
 }
 
 .party-btn span:nth-child(2) {

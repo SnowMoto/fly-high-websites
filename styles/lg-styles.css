@@ -41,21 +41,23 @@
     }
 
     .logo {
-        max-width: 10%;
+        max-width: 15%;
         height: auto;
+        margin-left: -8rem;
     }
 
     h1 {
-        margin-top: 10rem;
+        margin-top: 8rem;
+        margin-bottom: 5rem;
     }
 
     h1,
     h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     p {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .site-footer {
@@ -84,7 +86,7 @@
 
     /*Form Employment*/
     .form-wrapper {
-    margin-top: 8rem;
+        margin-top: 8rem;
     }
 
     .waiver {
@@ -95,9 +97,42 @@
     .accordion-header {
         font-size: 2rem;
     }
-    .accordion-content p, .accordion-content li{
+
+    .accordion-content p,
+    .accordion-content li {
         font-size: 1.25rem;
     }
 
-}
+    /*Park Info/Contact*/
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
 
+    .contact-container>div:first-child {
+        flex: 1 1 300px;
+    }
+
+    .contact-container>.accordion-container,
+    .contact-container>.accordion {
+        flex: 1 1 400px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+    font-size: 1rem;
+    }
+
+    .contact-form label {
+    font-size: 1rem;
+    }
+
+    .contact-form button {
+    font-size: 1.5rem;
+    }
+}
