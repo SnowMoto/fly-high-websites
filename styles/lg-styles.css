@@ -135,4 +135,13 @@
     .contact-form button {
     font-size: 1.5rem;
     }
+
+    /*Prices and Specials*/
+    .price-card h3, .special-card h3 {
+        font-size: 2rem;
+    }
+
+    .price-card span, .price-card p, .special-card p {
+        font-size: 1.5rem;
+    }
 }

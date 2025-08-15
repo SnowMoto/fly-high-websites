@@ -6,6 +6,7 @@
     --secondary-color: #000;
     --text-color: whitesmoke;
     --accent-color: #76d450;
+    --accent-color-2: #8017e2;
     --heading: 'Iceland', sans-serif;
     --body: "Electrolize", sans-serif;
 }
@@ -394,4 +395,135 @@ figure {
     outline: none;
     border-color: var(--accent-color);
     box-shadow: 0 0 12px var(--accent-color);
+}
+
+/* General Section Styling */
+.rates-specials {
+  padding: 2rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: var(--heading);
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.price-card {
+  position: relative; 
+    background-color: #000;
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; 
+}
+
+.price-card::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  background-image: url('/images/pheonix.png');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2; 
+  z-index: 0; 
+}
+
+.price-card > * {
+  position: relative;
+  z-index: 1; 
+}
+
+.price-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px var(--accent-color);
+}
+
+.price-card h3 {
+  font-family: var(--heading);
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.price-card .price {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  margin: 0.5rem 0;
+}
+
+.price-card span {
+  font-size: 1rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.price-card .note {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+/* Divider */
+.section-divider {
+  border: none;
+  height: .4rem;
+  background: linear-gradient(to right, var(--accent-color), var(--primary-color), var(--accent-color-2), var(--primary-color), var(--accent-color));
+  margin: 2.5rem 0;
+}
+
+/* Specials Grid */
+.specials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.special-card {
+  position: relative; 
+    background-color: #000;
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; 
+}
+
+.special-card > * {
+  position: relative;
+  z-index: 1; 
+}
+
+.special-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px var(--accent-color);
+}
+.special-card h3 {
+  font-family: var(--heading);
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.special-card p {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  line-height: 1.4;
 }
